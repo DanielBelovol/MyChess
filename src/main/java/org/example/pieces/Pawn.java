@@ -19,6 +19,6 @@ public class Pawn extends Piece {
     }
 
     public boolean isValidMovement(int row, int col) {
-        return true;
+        return this.row==row;
     }
 }
