@@ -52,7 +52,10 @@ public class Board extends JPanel {
 
     public boolean isValidMove(Move move) {
 
-        if(sameTeam(move.piece, move.capture)){
+        if (sameTeam(move.piece, move.capture)) {
+            return false;
+        }
+        if(!move.piece.isValidMovement(move.newCol,move.newRow)){
             return false;
         }
 
@@ -98,13 +101,21 @@ public class Board extends JPanel {
 
     public void paintComponent(Graphics graphics) {
         Graphics2D g2d = (Graphics2D) graphics;
-
+        //paint the board
         for (int r = 0; r < rows; r++)
             for (int c = 0; c < cols; c++) {
                 g2d.setColor((c + r) % 2 == 0 ? new Color(234, 184, 126) : new Color(180, 116, 48));
                 g2d.fillRect(c * titleSize, r * titleSize, titleSize, titleSize);
             }
-
+        if (selectedPiece != null)
+            for (int r = 0; r < rows; r++)
+                for (int c = 0; c < cols; c++) {
+                    if (isValidMove(new Move(this, selectedPiece, c, r))) {
+                        g2d.setColor(new Color(79, 211, 74, 178));
+                        g2d.fillRect(c * titleSize, r * titleSize, titleSize, titleSize);
+                    }
+                }
+        //paint pieces
         for (Piece piece : piecesList) {
             piece.print(g2d);
         }

@@ -4,7 +4,7 @@ import org.example.main.Board;
 
 import java.awt.image.BufferedImage;
 
-public class Pawn extends Piece{
+public class Pawn extends Piece {
     public Pawn(Board board, int col, int row, boolean isWhite) {
         super(board);
         this.col = col;
@@ -15,6 +15,10 @@ public class Pawn extends Piece{
         this.isWhite = isWhite;
         this.name = "Pawn";
 
-        this.sprite = sheet.getSubimage(5*sheetScale,isWhite? 0:sheetScale,sheetScale,sheetScale).getScaledInstance(board.titleSize,board.titleSize, BufferedImage.SCALE_SMOOTH);
+        this.sprite = sheet.getSubimage(5 * sheetScale, isWhite ? 0 : sheetScale, sheetScale, sheetScale).getScaledInstance(board.titleSize, board.titleSize, BufferedImage.SCALE_SMOOTH);
+    }
+
+    public boolean isValidMovement(int row, int col) {
+        return true;
     }
 }
