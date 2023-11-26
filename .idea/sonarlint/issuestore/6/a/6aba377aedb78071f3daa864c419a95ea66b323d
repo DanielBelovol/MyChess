@@ -1,0 +1,17 @@
+
+p
+java:S1104"UMake titleSize a static final constant or non-public and provide accessors if needed.(ñÄA8¬ÄèÛÀ1
+v
+java:S1104"YMake selectedPiece a static final constant or non-public and provide accessors if needed.(ÔåÀœ8¬ÄèÛÀ1
+N
+java:S1948",Make "piecesList" transient or serializable.(¢ı˜Áıÿÿÿÿ8ÂÄèÛÀ1
+L
+java:S1948"/Make "selectedPiece" transient or serializable.(ÔåÀœ8ÂÄèÛÀ1
+D
+java:S1948"'Make "input" transient or serializable.(£«ş´8ÂÄèÛÀ1
+c
+java:S11267"AReplace this if-then-else statement by a single return statement.(ŠŸ’úÿÿÿÿ8ÇÄèÛÀ1
+W
+java:S1161c":Add the "@Override" annotation above this method signature(®¡òù8ÌÄèÛÀ1
+O
+java:S1128"-Remove this unused import 'java.util.Arrays'.(î–˜Éüÿÿÿÿ8ÎÄèÛÀ1
